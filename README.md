@@ -10,7 +10,10 @@ Project created on 7th November 2023
 This Project does analysis on use of bikes in three cities
 
 ### Files used
-Include the files used
+chicago.csv
+new_york_city.csv
+washington.csv
+__MACOSX
 
 ### Credits
 It's important to give proper credit. Add links to any repo that inspired you or blogposts you consulted.
