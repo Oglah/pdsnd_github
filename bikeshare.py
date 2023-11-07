@@ -40,7 +40,7 @@ def get_filters():
     print('-'*40)
     return city, month, day
 
-def load_data(city, month, day):
+def load_bikedata(city, month, day):
     try:
         CSV_COLUMNS = ['Start Time', 'End Time', 'Trip Duration', 'Start Station', 'End Station', 'User Type', 'Gender', 'Birth Year']
         df = pd.read_csv(CITY_BIKEDATA[city], usecols=CSV_COLUMNS)
