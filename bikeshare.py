@@ -2,14 +2,14 @@ import time
 import pandas as pd
 import numpy as np
 
-CITY_DATA = { 'chicago': 'chicago.csv',
+CITY_BIKEDATA = { 'chicago': 'chicago.csv',
               'new york city': 'new_york_city.csv',
               'washington': 'washington.csv' }
 
 def get_city_input():
     while True:
         city = input("Please enter the city you want to analyze (Chicago, New York City, or Washington): ").strip().lower()
-        if city in CITY_DATA:
+        if city in CITY_BIKEDATA:
             return city
         else:
             print("Invalid input. Please enter a valid city.")
@@ -40,10 +40,10 @@ def get_filters():
     print('-'*40)
     return city, month, day
 
-def load_data(city, month, day):
+def load_bikedata(city, month, day):
     try:
         CSV_COLUMNS = ['Start Time', 'End Time', 'Trip Duration', 'Start Station', 'End Station', 'User Type', 'Gender', 'Birth Year']
-        df = pd.read_csv(CITY_DATA[city], usecols=CSV_COLUMNS)
+        df = pd.read_csv(CITY_BIKEDATA[city], usecols=CSV_COLUMNS)
     except FileNotFoundError:
         print(f"Data file for {city} not found. Exiting...")
         exit(1)
